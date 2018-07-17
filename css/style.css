@@ -1,0 +1,61 @@
+.main {
+    margin: 25px;
+}
+
+.androidApp {
+    position: fixed;
+    right: 25px;
+    top: 40px;   
+}
+
+
+.network {
+    margin-top: 25px;
+}
+
+.networkComboBox {
+    margin-left: 75px;
+}
+
+.account {
+    margin-top: 10px;
+}
+
+.accountAddressTextBox {
+    display: inline;
+    margin-left: 20px;
+    width: 400px;
+}
+
+.accountBalance {
+    margin-left: 50px;
+}
+
+.accountBalanceResult {
+    display: inline-block;
+    margin-left: 20px;
+    width: 150px;
+    background-color: #fcf8e3;
+    text-align: right;
+}
+
+.query {
+    margin-top: 25px;
+}
+
+.executeQueryButton {
+}
+
+.queryDetails {
+    margin-top: 45px;
+    
+    visibility: hidden;
+}
+
+.visiblee {
+    visibility: visible;
+}
+
+.hiddenn {
+    visibility: hidden;
+}

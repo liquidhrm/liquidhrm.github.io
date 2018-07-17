@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HelloWorld - Ethereum</title>
+
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png">
+
+    <!-- Boostrap,animation,fontawesome are just for eyecandy. By using just the CSS part of Bootstrap bootstrap.js is not imported -->
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- web3js -->
+    <script src="https://rawgit.com/ethereum/web3.js/0.16.0/dist/web3.min.js" type="text/javascript"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+
+    <script>
+        var web3;
+
+        $(document).ready( // Call JS function after page has been loaded
+            function() {
+                init();
+            }
+        );
+    </script>
+</head>
+
+<body>
+    <div id="main" class="main animated fadeIn">
+        <h1>HelloWorld - Ethereum</h1>
+        
+        <div class="androidApp fa">
+            <a href="https://drive.google.com/file/d/1WRMpmzWk9oWzEdJmwrQJ9MilcprHQExR">&#xf0ed;&nbsp;&nbsp;Download App for Android</a>
+        </div>
+        
+        <div class="network">
+            <span>Network</span>
+            <select id="networkComboBox" class="btn btn-primary dropdown-toggle networkComboBox"
+                    onchange="initWeb3()">
+            </select>
+        </div>
+
+        <div class="account">
+            <span>Account address</span>
+            <input id="accountAddressTextBox" class="form-control accountAddressTextBox" type="text"/>
+            <span class="accountBalance">Account balance</span>
+            <div id="accountBalanceResult" class="accountBalanceResult animated">&nbsp;</div>
+            <span> Ether</span>
+        </div>
+        
+        <div class="query">
+            <input id="executeQueryButton" class="btn btn-success executeQueryButton" type="button" 
+                   value="Query account balance" 
+                   onclick="executeQuery()"
+                   onmouseover="resetQueryResultsAnimation()" />
+        </div>
+
+        <div id="queryDetails" class="queryDetails animated hiddenn">
+            <p class="lead">Ethereum network query details</p>
+            <div id="blockNumberResult" class="blockNumberResult animated"></div>
+            <div id="currentProviderResult" class="currentProviderResult animated"></div>
+            <div id="nodeVersionResult" class="nodeVersionResult animated"></div>
+            <div id="networkVersionResult" class="networkVersionResult animated"></div>
+            <div id="apiVersionResult" class="apiVersionResult animated"></div>
+        </div>
+    </div>
+</body>
+
+</html>
